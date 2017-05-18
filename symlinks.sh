@@ -4,6 +4,8 @@ DIR=$( cd $(dirname $0) ; pwd )
 
 FILES=(
   # Terminal
+  ".terminfo/78/xterm-256color"
+  ".terminfo/78/xterm-256color.terminfo"
   ".oh-my-zsh/themes/dbushell.zsh-theme"
   ".bash_profile"
   ".hyper.js"
