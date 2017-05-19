@@ -1,4 +1,23 @@
 [root]
 name = "dotfiles"
 version = "0.1.0"
+dependencies = [
+ "colored 1.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
 
+[[package]]
+name = "colored"
+version = "1.5.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "lazy_static 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "lazy_static"
+version = "0.2.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[metadata]
+"checksum colored 1.5.1 (registry+https://github.com/rust-lang/crates.io-index)" = "66e436adfcba3a50905f943d990f5ef7c230ebe2d9476ab5c7dc2427afe357ee"
+"checksum lazy_static 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)" = "3b37545ab726dd833ec6420aaba8231c5b320814b9029ad585555d2a03e94fbf"
