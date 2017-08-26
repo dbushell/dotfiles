@@ -26,7 +26,7 @@ YELLOW=$(printf " \e[33m")
 for FILE in "${FILES[@]}"
 do
   echo -e "${YELLOW}$DIR/$FILE${RESET} ← ${PINK}~/$FILE"
-  if [ ! -f ~/$FILE ]; then
-    ln -s $DIR/$FILE ~/$FILE
-  fi
+  # if [ ! -f ~/$FILE ]; then
+    ln -sfn $DIR/$FILE ~/$FILE
+  # fi
 done
