@@ -43,8 +43,14 @@ git_custom_status() {
   fi
 }
 
+if [[ -n $SSH_CONNECTION ]]; then
+  EMOJI_USER="%{$CYAN_BOLD%}👽 %n%{$RESET_COLOR%}%{$CYAN%}"
+else
+  EMOJI_USER="%{$GREEN_BOLD%}🦄 %n%{$RESET_COLOR%}%{$GREEN%}"
+fi
+
 # Prompt format
 PROMPT='
-🦄%   %{$GREEN_BOLD%}%n%{$RESET_COLOR%}%{$GREEN%}@%m%{$WHITE%}:%{$YELLOW%}%~%u$(git_custom_status)%{$RESET_COLOR%}
-%{$BLUE%}>%{$RESET_COLOR%} '
+%{$EMOJI_USER%}@%m%{$RESET_COLOR%}%{$WHITE%}:%{$YELLOW%}%~%u$(git_custom_status)%{$RESET_COLOR%}
+%{$BLUE%}➜%{$RESET_COLOR%} '
 RPROMPT='%{$GREEN_BOLD%}$(git_current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
