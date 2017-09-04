@@ -1,4 +1,7 @@
-source ~/.profile
+if [ -f ~/.profile ]; then
+  source ~/.profile
+fi
+
 # paths
 NPM_PACKAGES="$HOME/.npm-packages"
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
