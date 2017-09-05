@@ -18,6 +18,7 @@ _Store
 .DS_Store
 
 # Dev files
+node_modules
 .sass-cache
 *.map
 
