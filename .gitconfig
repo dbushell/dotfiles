@@ -20,7 +20,7 @@
 	smudge = git-media-smudge %f
 [core]
 	editor = vim
-	excludefiles = ~/.gitignore
+	excludesfile = ~/.gitignore
 [user]
 	name = David Bushell
 	email = david@dbushell.com
