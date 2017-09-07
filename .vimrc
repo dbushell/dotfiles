@@ -128,7 +128,7 @@ set scrolloff=10
 set splitbelow
 set splitright
 
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|git|svn|sass-cahe))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|git|svn|sass-cache))$'
 
 " ********************
 " *  Visual Options  *
