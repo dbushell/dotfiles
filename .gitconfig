@@ -24,3 +24,5 @@
 [user]
 	name = David Bushell
 	email = david@dbushell.com
+[push]
+	default = simple
