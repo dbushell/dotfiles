@@ -11,6 +11,8 @@ export PATH="/usr/local/git/bin:$PATH"
 export PATH="$NPM_PACKAGES/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
+export PATH="/usr/local/sbin:$PATH"
+
 # use Homebrew python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
