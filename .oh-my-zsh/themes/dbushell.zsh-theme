@@ -53,4 +53,4 @@ fi
 PROMPT='
 %{$EMOJI_USER%}@%m%{$RESET_COLOR%}%{$WHITE%}:%{$YELLOW%}%~%u$(git_custom_status)%{$RESET_COLOR%}
 %{$BLUE%}➜%{$RESET_COLOR%} '
-RPROMPT='%{$GREEN_BOLD%}$(git_current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
+#RPROMPT='%{$GREEN_BOLD%}$(git_current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'

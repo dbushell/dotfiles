@@ -35,4 +35,4 @@ export EDITOR="vim"
 #alias ld=/usr/local/bin/gcc-7
 #alias cc=/usr/local/bin/gcc-7
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"

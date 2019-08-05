@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="dbushell"
 
-plugins=(git osx ruby rbenv)
+plugins=(git osx) # ruby #rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
