@@ -25,3 +25,9 @@ node_modules
 # Vim
 *.swo
 *.swp
+
+*.log
+
+# NPM
+
+package-lock.json

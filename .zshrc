@@ -1,13 +1,14 @@
-# Template:
-# https://github.com/robbyrussell/oh-my-zsh/blob/master/templates/zshrc.zsh-template
-
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-ZSH_THEME="dbushell"
-
-plugins=(git osx) # ruby #rbenv)
-
-source $ZSH/oh-my-zsh.sh
+# ~/.zshrc
 
 source ~/.bash_profile
+
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
+
+eval "$(starship init zsh)"
+
+alias glol="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line

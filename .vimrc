@@ -2,24 +2,6 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'rust-lang/rust.vim'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-call vundle#end()
-filetype plugin indent on
-
-" Use the OS clipboard by default (on versions compiled with `+clipboard`)
-set clipboard=unnamed
-
 " Enhance command-line completion
 set wildmenu
 
@@ -41,9 +23,6 @@ set fileencoding=utf-8
 
 " Change mapleader
 let mapleader=","
-" Don’t add empty newlines at the end of files
-" set binary
-" set noeol
 
 set viminfo+=n~/.vim/viminfo
 " Centralize backups, swapfiles and undo history
@@ -75,7 +54,7 @@ set incsearch
 set laststatus=2
 
 " Enable mouse in all modes
-set mouse=a
+" set mouse=a
 
 " Disable error bells
 set noerrorbells
@@ -145,8 +124,8 @@ syntax enable
 " highlight matching parenthesis and brackets
 set showmatch
 set t_Co=256
-colorscheme dbushell
-set background=dark
+" colorscheme dbushell
+" set background=dark
 
 " highlight comment cterm=italic
 " highlight htmlArg cterm=italic
@@ -170,13 +149,3 @@ set list
 
 " highlight comment cterm=italic gui=italic
 " highlight htmlArg cterm=italic
-
-" autocmd vimenter * NERDTree
-
-" How can I map a specific key or shortcut to open NERDTree?
-map <C-n> :NERDTreeToggle<CR>
-" How can I close vim if the only window left open is a NERDTree?
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Hyper / Airline bug - https://github.com/zeit/hyper/issues/1037
-set t_RV=

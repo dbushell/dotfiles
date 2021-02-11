@@ -6,33 +6,25 @@ fi
 NPM_PACKAGES="$HOME/.npm-packages"
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
-export PATH="$HOME/bin:/usr/local/bin:$PATH"
-export PATH="/usr/local/git/bin:$PATH"
 export PATH="$NPM_PACKAGES/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/local/sbin:$PATH"
 
 # use Homebrew python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 export EDITOR="vim"
 
-#alias gcc="gcc-7"
-#alias cc="gcc-7"
-#alias g++="g++-7"
-#alias c++="c++-7"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 
-#export CC=/usr/local/bin/gcc-7
-#export CXX=/usr/local/bin/g++-7
-#export CPP=/usr/local/bin/cpp-7
-#export LD=/usr/local/bin/gcc-7
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-#alias c++=/usr/local/bin/c++-7
-#alias g++=/usr/local/bin/g++-7
-#alias gcc=/usr/local/bin/gcc-7
-#alias cpp=/usr/local/bin/cpp-7
-#alias ld=/usr/local/bin/gcc-7
-#alias cc=/usr/local/bin/gcc-7
+# The next line updates PATH for Netlify's Git Credential Helper.
+if [ -f "/Users/$(whoami)/.netlify/helper/path.zsh.inc" ]; then source "/Users/$(whoami)/.netlify/helper/path.zsh.inc"; fi
 
 # eval "$(rbenv init -)"
