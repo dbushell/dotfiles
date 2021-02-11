@@ -74,44 +74,13 @@ set title
 " Show the (partial) command as it’s being typed
 set showcmd
 
-" Use relative line numbers
-" if exists("&relativenumber")
-" 	set relativenumber
-" 	au BufReadPost * set relativenumber
-" endif
-
 " Start scrolling three lines before the horizontal window border
 set scrolloff=10
-
-" Strip trailing whitespace (,ss)
-" function! StripWhitespace()
-" 	let save_cursor = getpos(".")
-" 	let old_query = getreg('/')
-" 	:%s/\s\+$//e
-" 	call setpos('.', save_cursor)
-" 	call setreg('/', old_query)
-" endfunction
-" noremap <leader>ss :call StripWhitespace()<CR>
-
-" Save a file as root (,W)
-" noremap <leader>W :w !sudo tee % > /dev/null<CR>
-
-" Automatic commands
-" if has("autocmd")
-" 	" Enable file type detection
-" 	filetype on
-" 	" Treat .json files as .js
-" 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-" endif
 
 set splitbelow
 set splitright
 
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|git|svn|sass-cache))$'
-
-" ********************
-" *  Visual Options  *
-" ********************
 
 set colorcolumn=81
 
@@ -122,13 +91,8 @@ set number
 syntax enable
 
 " highlight matching parenthesis and brackets
-set showmatch
-set t_Co=256
-" colorscheme dbushell
-" set background=dark
-
-" highlight comment cterm=italic
-" highlight htmlArg cterm=italic
+ set showmatch
+ set t_Co=256
 
 " Highlight current line
 set cursorline
@@ -147,5 +111,3 @@ set ruler
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·,eol:¬
 set list
 
-" highlight comment cterm=italic gui=italic
-" highlight htmlArg cterm=italic
