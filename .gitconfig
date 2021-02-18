@@ -22,6 +22,7 @@
 [user]
 	name = David Bushell
 	email = david@dbushell.com
+	signingkey = D65EF16D0BFB5DCF
 [push]
 	default = simple
 [credential]
@@ -37,3 +38,9 @@
 	required = true
 [include]
   path = ~/.netlify/helper/git-config
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
