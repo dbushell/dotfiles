@@ -4,9 +4,7 @@ fi
 
 export EDITOR="vim"
 
-NPM_PACKAGES="$HOME/.npm-packages"
-NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-export PATH="$NPM_PACKAGES/bin:$PATH"
+export PATH="$HOME/.npm/packages/bin:$PATH"
 
 # export PATH="/usr/local/sbin:$PATH"
 
