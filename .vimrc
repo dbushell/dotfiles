@@ -1,7 +1,3 @@
-" Vim
-set nocompatible
-filetype off
-
 " Enhance command-line completion
 set wildmenu
 
@@ -25,12 +21,9 @@ set fileencoding=utf-8
 let mapleader=","
 
 set viminfo+=n~/.vim/viminfo
-" Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-if exists("&undodir")
-	set undodir=~/.vim/undo
-endif
+set backupdir=~/.vim/backup
+set directory=~/.vim/swap
+set undodir=~/.vim/undo
 set undofile
 
 " Respect modeline in files
@@ -77,13 +70,6 @@ set showcmd
 " Start scrolling three lines before the horizontal window border
 set scrolloff=10
 
-set splitbelow
-set splitright
-
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|git|svn|sass-cache))$'
-
-set colorcolumn=81
-
 " Enable line numbers
 set number
 
@@ -99,9 +85,7 @@ set cursorline
 
 " Make tabs as wide as two spaces
 set tabstop=2
-
 set shiftwidth=2
-
 set expandtab
 
 " Show the cursor position
@@ -110,4 +94,3 @@ set ruler
 " Show “invisible” characters
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·,eol:¬
 set list
-
