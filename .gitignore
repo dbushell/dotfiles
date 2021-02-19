@@ -26,8 +26,5 @@ node_modules
 *.swo
 *.swp
 
-*.log
-
 # NPM
-
 package-lock.json

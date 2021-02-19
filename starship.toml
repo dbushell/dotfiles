@@ -7,5 +7,5 @@ format = "[$user]($style)"
 show_always = true
 
 [hostname]
-format =  "[@$hostname](bold green) "
+format = "[@$hostname](bold green) "
 ssh_only = false
