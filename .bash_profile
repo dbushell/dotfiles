@@ -10,6 +10,9 @@ export PATH="$HOME/.npm/packages/bin:$PATH"
 # Homebrew python
 export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
 
+# Homebrew XQuartz
+export PATH="/opt/X11/bin:$PATH"
+
 # Netlify's Git Credential Helper
 if [ -f "/Users/$(whoami)/.netlify/helper/path.zsh.inc" ]; then source "/Users/$(whoami)/.netlify/helper/path.zsh.inc"; fi
 
