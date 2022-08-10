@@ -20,12 +20,19 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # Deno packages
 export PATH="$HOME/.deno/bin:$PATH"
 
+# Go packages
+export PATH="$HOME/go/bin:$PATH"
+
 # Homebrew python
+eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
 
 # Netlify's Git Credential Helper
 if [ -f "$HOME/.netlify/helper/path.zsh.inc" ]; then
   source "$HOME/.netlify/helper/path.zsh.inc";
+fi
+if [ -f "/Users/$USER/Library/Preferences/netlify/helper/path.zsh.inc" ]; then
+  source "/Users/$USER/Library/Preferences/netlify/helper/path.zsh.inc";
 fi
 
 # Rust cargo crates
@@ -54,3 +61,4 @@ alias glol="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgre
 alias docker-compose="docker compose"
 
 eval "$(starship init zsh)"
+
