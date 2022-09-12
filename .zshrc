@@ -31,14 +31,17 @@ export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
 if [ -f "$HOME/.netlify/helper/path.zsh.inc" ]; then
   source "$HOME/.netlify/helper/path.zsh.inc";
 fi
-if [ -f "/Users/$USER/Library/Preferences/netlify/helper/path.zsh.inc" ]; then
-  source "/Users/$USER/Library/Preferences/netlify/helper/path.zsh.inc";
+if [ -f "$HOME/Library/Preferences/netlify/helper/path.zsh.inc" ]; then
+  source "$HOME/Library/Preferences/netlify/helper/path.zsh.inc";
 fi
 
 # Rust cargo crates
 if [ -f "$HOME/.cargo/env" ]; then
   source "$HOME/.cargo/env"
 fi
+
+# Bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 export DO_NOT_TRACK=1
 
