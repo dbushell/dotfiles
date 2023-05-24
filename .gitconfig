@@ -22,11 +22,9 @@
 [user]
 	name = David Bushell
 	email = david@dbushell.com
-	signingkey = D65EF16D0BFB5DCF
+	signingkey = ~/.ssh/signingkey.pub
 [push]
 	default = simple
-[credential]
-	helper = osxkeychain
 [pager]
 	branch = false
 [pull]
@@ -43,6 +41,8 @@
 [tag]
 	gpgsign = true
 [include]
-  path = ~/.netlify/helper/git-config
-[include]
-  path = ~/Library/Preferences/netlify/helper/git-config
+	path = ~/Library/Preferences/netlify/helper/git-config
+[credential]
+	helper = osxkeychain
+[gpg]
+	format = ssh
