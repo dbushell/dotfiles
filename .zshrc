@@ -2,6 +2,14 @@
 
 source ~/.bash_profile
 
+export DO_NOT_TRACK=1
+export HOMEBREW_NO_ANALYTICS=1
+export DISABLE_BUN_ANALYTICS=1
+
+# Homebrew python
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
+
 export HISTSIZE=10000
 export SAVEHIST=10000
 
@@ -14,8 +22,8 @@ export NPM_PACKAGES="$HOME/.npm/packages"
 export PATH="$NPM_PACKAGES/bin:$PATH"
 
 # Bun packages
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+export BUN_PACKAGES="$HOME/.bun"
+export PATH="$BUN_PACKAGES/bin:$PATH"
 
 # Deno packages
 export PATH="$HOME/.deno/bin:$PATH"
@@ -23,9 +31,15 @@ export PATH="$HOME/.deno/bin:$PATH"
 # Go packages
 export PATH="$HOME/go/bin:$PATH"
 
-# Homebrew python
-eval "$(/opt/homebrew/bin/brew shellenv)"
-export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
+# Rust cargo crates
+if [ -f "$HOME/.cargo/env" ]; then
+  source "$HOME/.cargo/env"
+fi
+
+# Bun completions
+if [ -f "$HOMEBREW_PREFIX/share/zsh/site-functions/_bun" ]; then
+  source "$HOMEBREW_PREFIX/share/zsh/site-functions/_bun"
+fi
 
 # Netlify's Git Credential Helper
 if [ -f "$HOME/.netlify/helper/path.zsh.inc" ]; then
@@ -34,16 +48,6 @@ fi
 if [ -f "$HOME/Library/Preferences/netlify/helper/path.zsh.inc" ]; then
   source "$HOME/Library/Preferences/netlify/helper/path.zsh.inc";
 fi
-
-# Rust cargo crates
-if [ -f "$HOME/.cargo/env" ]; then
-  source "$HOME/.cargo/env"
-fi
-
-# Bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-export DO_NOT_TRACK=1
 
 setopt APPEND_HISTORY
 setopt SHARE_HISTORY
@@ -61,7 +65,12 @@ bindkey "^[[F" end-of-line
 
 alias glol="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
 alias docker-compose="docker compose"
 
 eval "$(starship init zsh)"
 
+if [[ "$TERM" == "xterm-kitty" ]]; then
+  alias ssh="kitty +kitten ssh"
+fi
