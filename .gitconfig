@@ -35,8 +35,6 @@
 	gpgsign = true
 [tag]
 	gpgsign = true
-[include]
-	path = ~/Library/Preferences/netlify/helper/git-config
 [credential]
 	helper = osxkeychain
 [gpg]
