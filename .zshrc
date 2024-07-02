@@ -63,7 +63,7 @@ setopt HIST_BEEP
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 
-alias glol="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+alias glol="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(dim)(%G? %GS)%Creset'"
 
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
@@ -74,3 +74,5 @@ eval "$(starship init zsh)"
 if [[ "$TERM" == "xterm-kitty" ]]; then
   alias ssh="kitty +kitten ssh"
 fi
+
+source "$HOME/.zshrc_private"
