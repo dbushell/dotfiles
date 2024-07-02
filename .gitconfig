@@ -22,18 +22,13 @@
 [user]
 	name = David Bushell
 	email = david@dbushell.com
-	signingkey = ~/.ssh/signingkey.pub
+	signingkey = ~/.ssh/id_ed25519_sig.pub
 [push]
 	default = simple
 [pager]
 	branch = false
 [pull]
 	rebase = false
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
 [init]
 	defaultBranch = main
 [commit]
@@ -46,3 +41,10 @@
 	helper = osxkeychain
 [gpg]
 	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.ssh/allowed_signers
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
