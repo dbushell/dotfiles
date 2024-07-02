@@ -1,7 +1,5 @@
 # ~/.zshrc
 
-source ~/.bash_profile
-
 export DO_NOT_TRACK=1
 export HOMEBREW_NO_ANALYTICS=1
 export DISABLE_BUN_ANALYTICS=1
@@ -39,14 +37,6 @@ fi
 # Bun completions
 if [ -f "$HOMEBREW_PREFIX/share/zsh/site-functions/_bun" ]; then
   source "$HOMEBREW_PREFIX/share/zsh/site-functions/_bun"
-fi
-
-# Netlify's Git Credential Helper
-if [ -f "$HOME/.netlify/helper/path.zsh.inc" ]; then
-  source "$HOME/.netlify/helper/path.zsh.inc";
-fi
-if [ -f "$HOME/Library/Preferences/netlify/helper/path.zsh.inc" ]; then
-  source "$HOME/Library/Preferences/netlify/helper/path.zsh.inc";
 fi
 
 setopt APPEND_HISTORY

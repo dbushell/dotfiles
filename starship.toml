@@ -1,13 +1,11 @@
 # ~/.config/starship.toml
 
 [username]
-style_root = "magenta bold"
-style_user = "green bold"
-format = "[$user]($style)"
+format = "[$user](white)"
 show_always = true
 
 [hostname]
-format = "[@$hostname](bold green) "
+format = "[@$hostname](bold green)  "
 ssh_only = false
 
 [memory_usage]
