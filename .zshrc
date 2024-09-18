@@ -4,16 +4,15 @@ export DO_NOT_TRACK=1
 export HOMEBREW_NO_ANALYTICS=1
 export DISABLE_BUN_ANALYTICS=1
 
-# Homebrew python
-eval "$(/opt/homebrew/bin/brew shellenv)"
-export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
+export EDITOR=vim
 
+export HISTFILE=~/.zsh_history
 export HISTSIZE=10000
 export SAVEHIST=10000
 
-export HISTFILE=~/.zsh_history
-
-export EDITOR=vim
+# Homebrew python
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
 
 # NPM packages
 export NPM_PACKAGES="$HOME/.npm/packages"
@@ -32,11 +31,6 @@ export PATH="$HOME/go/bin:$PATH"
 # Rust cargo crates
 if [ -f "$HOME/.cargo/env" ]; then
   source "$HOME/.cargo/env"
-fi
-
-# Bun completions
-if [ -f "$HOMEBREW_PREFIX/share/zsh/site-functions/_bun" ]; then
-  source "$HOMEBREW_PREFIX/share/zsh/site-functions/_bun"
 fi
 
 setopt APPEND_HISTORY
@@ -59,10 +53,10 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 alias docker-compose="docker compose"
 
-eval "$(starship init zsh)"
-
 if [[ "$TERM" == "xterm-kitty" ]]; then
   alias ssh="kitty +kitten ssh"
 fi
+
+eval "$(starship init zsh)"
 
 source "$HOME/.zshrc_private"
