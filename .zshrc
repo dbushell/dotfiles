@@ -59,4 +59,7 @@ fi
 
 eval "$(starship init zsh)"
 
+alias vvim="/usr/bin/vim"
+alias vim="/opt/homebrew/bin/nvim"
+
 source "$HOME/.zshrc_private"
